@@ -1,0 +1,26 @@
+interface Payment {
+    void pay();
+}
+
+class UPI implements Payment {
+    public void pay() {
+        System.out.println("Payment done using UPI");
+    }
+}
+
+class Card implements Payment {
+    public void pay() {
+        System.out.println("Payment done using Card");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Payment p1 = new UPI();
+        Payment p2 = new Card();
+
+        p1.pay();
+        p2.pay();
+    }
+}
